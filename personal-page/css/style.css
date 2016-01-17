@@ -1,0 +1,232 @@
+@import url(reset.css);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans:400,400italic,600,600italic);
+/**********************************************
+GENERAL
+***********************************************/
+
+
+body {
+  color: #000;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16.5px;
+  background: url('../img/background.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+
+h1 {
+  font-size: 60px;
+  font-family: 'Dancing Script', cursive;
+  color: #46036a;
+  margin: 20px 0px;
+  letter-spacing: 1.25px;
+
+}
+
+
+h3 {
+	color: #fff;
+	background: #988b9f;
+	border-bottom-left-radius: 5px;
+	padding: 10px;
+	margin: 15px 0;
+	font-size: 20px;
+	letter-spacing: 1.25px;
+	font-weight: lighter;
+}
+
+
+p {
+	color: #000;
+	padding: 10px 20px 0 7px;
+	line-height: 25px;
+	margin: 0;
+}
+
+
+a {
+	color: #7f07bf;
+	text-decoration: underline;
+}
+
+a:hover {
+    color: #46036a;
+}
+
+li {
+list-style-type: none;
+}
+
+/**********************************************
+BIO BOX
+***********************************************/
+
+.box {
+	background: rgba(255, 255, 255, 0.8);
+	margin-top: 40px;
+	width: 465px;
+	height: 675px;
+	padding: 5px 0px 10px 20px;
+	border-bottom-right-radius:5px;
+	border-top-right-radius:5px;	
+}
+
+/**********************************************
+MODAL POPUPS
+***********************************************/
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+    overflow: auto;
+}
+
+
+
+.modalDialog img {
+    border: 1px solid;
+}
+
+
+.padding {
+    padding-bottom: 2em;
+
+}
+
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 60%;
+	position: relative;
+	margin: 10% auto;
+	padding: 2em;
+	background: #fff;
+}
+
+.modalDialog  h2 {
+	padding-bottom: 1em;
+    font-size: 1.5em;
+}
+
+
+
+.close {
+	background: #988b9f;
+	color: #FFFFFF;
+	line-height: 50px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 50px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+
+.close:hover { 
+    background: #30173f;
+    color: #fff;
+}
+
+
+/*----------------------------------------------------------------------------- 
+ SOCIAL LINKS  
+-----------------------------------------------------------------------------*/
+
+
+.social-links ul li {
+	float: left; 
+    padding-top: 12px;
+}
+	.social-links ul li a {
+
+		margin: 0px;
+		padding: 0px;
+		width: 32px;
+		height: 31px;
+		display: block; 
+
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+
+		background: url('../img/social.png');
+	}
+
+	.social-links ul li.instagram a {
+		background: url('../img/social.png');
+		background-position: 0 0px;
+		margin-right: 5px;
+	}
+
+	.social-links ul li.twitter a {
+		background: url('../img/social.png');
+		background-position: 63px 62px;
+		margin-right: 3px;
+	}
+
+	.social-links ul li.dribbble a {
+		background-position: -160px 62px;
+		margin-right: 3px;
+	}
+
+
+	.social-links ul li.instagram a:hover {
+		background-position: 0 31px;
+	}
+
+	.social-links ul li.twitter a:hover {
+		background-position: 63px 31px;
+	}
+
+	.social-links ul li.dribbble a:hover {
+		background-position: -160px 93px;
+	}
+
+/*----------------------------------------------------------------------------- 
+ MEDIA QUERIES
+-----------------------------------------------------------------------------*/
+
+@media (min-width: 100px) and (max-width:200px) {
+  body {
+    background-image: none;
+    background-color: red;
+  }
+}
+
+@media (max-width: 500px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
